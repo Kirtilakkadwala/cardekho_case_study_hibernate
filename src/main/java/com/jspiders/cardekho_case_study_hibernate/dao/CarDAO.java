@@ -23,9 +23,11 @@ public class CarDAO {
    	 if(entityManagerFactory != null) {
    		 entityManagerFactory.close();
    	 }
+   	 
    	 if(entityManager != null) {
    		 entityManager.close();
    	 }
+   	 
    	 if(entityTransaction != null) {
    		 if(entityTransaction.isActive()) {
    			 entityTransaction.rollback();
